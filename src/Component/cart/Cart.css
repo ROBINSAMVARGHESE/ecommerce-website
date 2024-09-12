@@ -1,0 +1,14 @@
+/* Cart.css */
+.cart-container {
+    padding: 20px;
+  }
+  
+  .btn-outline-danger {
+    margin-right: 10px;
+  }
+  
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  

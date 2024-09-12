@@ -1,0 +1,26 @@
+
+/* Home.css */
+.hero {
+    padding: 20px;
+    background-color: #ecf1f3; /* Adjust as needed */
+    width: 100%;
+    height: 40%;
+    box-sizing: inherit;
+  }
+  
+.navbar-nav {
+    margin: 0 auto; /* Center the navbar items horizontally */
+}
+
+.navbar-brand {
+    font-weight: bolder; /* Adjust font weight */
+}
+
+/* Optional: Style for mobile and tablet views */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center; /* Center text on mobile */
+    }
+}
+  
+  

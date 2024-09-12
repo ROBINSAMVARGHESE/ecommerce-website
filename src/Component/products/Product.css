@@ -1,0 +1,112 @@
+/* Product.css */
+
+/* Container styling */
+.container {
+    margin-top: 20px;
+}
+
+/* Responsive image */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Loading spinner */
+.loading {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Skeleton loader styles */
+.skeleton {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.skeleton-text {
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+/* Error message */
+.error {
+    color: red;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Display for product title */
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Lead text styling */
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+/* Primary button styling */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .display-4 {
+        font-size: 2rem; /* Slightly smaller font size on tablets */
+    }
+
+    .lead {
+        font-size: 1.1rem; /* Adjust lead text size for tablets */
+    }
+
+    .skeleton-image {
+        height: 250px; /* Adjust skeleton image height for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 1.75rem; /* Smaller font size on mobile devices */
+    }
+
+    .lead {
+        font-size: 1rem; /* Smaller lead text size for mobile devices */
+    }
+
+    .skeleton-image {
+        height: 200px; /* Adjust skeleton image height for mobile devices */
+    }
+
+    .container {
+        padding: 0 15px; /* Add padding to container on mobile devices */
+    }
+}
+
+@media (max-width: 576px) {
+    .display-4 {
+        font-size: 1.5rem; /* Even smaller font size for very small screens */
+    }
+
+    .lead {
+        font-size: 0.875rem; /* Smaller lead text size for very small screens */
+    }
+
+    .skeleton-image {
+        height: 150px; /* Adjust skeleton image height for very small screens */
+    }
+
+    .btn-primary {
+        font-size: 0.875rem; /* Smaller font size for buttons on very small screens */
+        padding: 0.5rem 1rem; /* Adjust padding for buttons */
+    }
+}

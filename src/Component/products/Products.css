@@ -1,0 +1,102 @@
+/* Products.css */
+.container {
+    max-width: 1200px;
+}
+.error{
+    color: red;
+    font-size: 25px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-img-top {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.btn-outline-dark {
+    border-color: #333;
+    color: #333;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.buttons .btn-filter {
+    margin: 5px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buttons .btn-filter:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.loading .card {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .btn-filter {
+        font-size: 0.8rem;
+    }
+    .card-img-top {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-filter {
+        font-size: 0.7rem;
+        margin: 3px;
+    }
+    .card-img-top {
+        height: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-filter {
+        font-size: 0.6rem;
+        padding: 5px;
+    }
+    .card-img-top {
+        height: 150px;
+    }
+}

@@ -1,0 +1,14 @@
+.footer {
+    margin-top: auto;
+    padding: 2rem 1;
+    background-color: #f8f9fa;
+  }
+
+ 
+  
+  /* Responsive alignment */
+@media (max-width: 767px) {
+    .text-md-end {
+      text-align: center; /* Center-align text on small screens */
+    }
+  }

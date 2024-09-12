@@ -1,0 +1,136 @@
+/* Base Styles */
+.contact-container {
+    padding: 20px;
+  }
+  
+  .contact-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .contact-info {
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .contact-details {
+    margin-bottom: 20px;
+  }
+  
+  .contact-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-list li {
+    margin-bottom: 10px;
+  }
+  
+  .contact-list a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .contact-form {
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+  }
+  
+  .social-media {
+    margin-bottom: 30px;
+  }
+  
+  .social-media-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .social-media-list li {
+    margin: 10px;
+  }
+  
+  .social-media-list a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-media-list a:hover {
+    color: #007bff;
+  }
+  
+  .social-media-list svg {
+    margin-right: 8px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .contact-info,
+    .contact-form,
+    .social-media {
+      padding: 0 15px;
+    }
+  
+    .contact-list {
+      font-size: 14px;
+    }
+  
+    .form-group input,
+    .form-group textarea {
+      font-size: 14px;
+    }
+  
+    .social-media-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .social-media-list li {
+      margin: 5px 0;
+    }
+  }
+  
