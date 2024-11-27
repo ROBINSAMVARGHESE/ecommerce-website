@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../feature/Cart/Cartslice';
@@ -10,8 +10,9 @@ function Product() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [quantity, setQuantity] = useState(1); // Track quantity
   const dispatch = useDispatch();
-  const navigate = useNavigate(); // useNavigate hook
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getProduct = async () => {
@@ -32,8 +33,19 @@ function Product() {
 
   const handleAddToCart = () => {
     if (product) {
-      dispatch(addToCart(product)); // Dispatch to Redux store
-      navigate('/cart'); // Navigate to the Cart page after adding product
+      const productWithQuantity = { ...product, quantity };
+      dispatch(addToCart(productWithQuantity)); // Dispatch to Redux store
+      navigate('/cart'); // Navigate to Cart page
+    }
+  };
+
+  const handleIncreaseQuantity = () => {
+    setQuantity(prevQuantity => prevQuantity + 1);
+  };
+
+  const handleDecreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(prevQuantity => prevQuantity - 1);
     }
   };
 
@@ -51,7 +63,17 @@ function Product() {
           <h1 className="display-4">{product.title}</h1>
           <p className="lead">${product.price}</p>
           <p>{product.description}</p>
-          <button className="btn btn-outline-dark" onClick={handleAddToCart}>Add to Cart</button>
+          
+          {/* Quantity Control */}
+          <div className="quantity-controls">
+            <button className="btn btn-outline-dark" onClick={handleDecreaseQuantity}>-</button>
+            <span className="quantity">{quantity}</span>
+            <button className="btn btn-outline-dark" onClick={handleIncreaseQuantity}>+</button>
+          </div>
+
+          <button className="btn btn-outline-dark" onClick={handleAddToCart}>
+            Add {quantity} to Cart
+          </button>
         </div>
       </div>
     </div>
@@ -59,6 +81,7 @@ function Product() {
 }
 
 export default Product;
+
 
 
 
