@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../feature/Cart/Cartslice';
@@ -11,6 +11,7 @@ function Product() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const dispatch = useDispatch();
+  const navigate = useNavigate(); // useNavigate hook
 
   useEffect(() => {
     const getProduct = async () => {
@@ -31,7 +32,8 @@ function Product() {
 
   const handleAddToCart = () => {
     if (product) {
-      dispatch(addToCart(product));
+      dispatch(addToCart(product)); // Dispatch to Redux store
+      navigate('/cart'); // Navigate to the Cart page after adding product
     }
   };
 
@@ -57,6 +59,7 @@ function Product() {
 }
 
 export default Product;
+
 
 
 

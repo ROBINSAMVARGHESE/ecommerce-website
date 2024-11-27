@@ -1,14 +1,27 @@
-/* Cart.css */
-.cart-container {
-    padding: 20px;
-  }
-  
-  .btn-outline-danger {
-    margin-right: 10px;
-  }
-  
-  .list-group-item {
-    display: flex;
-    justify-content: space-between;
-  }
-  
+.thank-you-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.thank-you-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.thank-you-container p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.thank-you-container button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.thank-you-container button:hover {
+  background-color: #218838;
+}
